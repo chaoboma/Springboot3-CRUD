@@ -1,0 +1,33 @@
+# 端口
+server:
+  port: 8899
+
+
+spring:
+  application:
+    name: Springboot3-CRUD
+
+  #配置数据源
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/my_db?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 10
+      max-lifetime: 1800000
+      idle-timeout: 180000
+      connection-timeout: 30000
+
+
+#日志输出
+logging:
+  level:
+    org.liurb.*: debug
+    sql: debug
+    org:
+      springframework:
+        jdbc:
+          core:
+            JdbcTemplate: DEBUG
