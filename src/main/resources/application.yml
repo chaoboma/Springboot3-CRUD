@@ -9,16 +9,10 @@ spring:
 
   #配置数据源
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/my_db?useSSL=false&useUnicode=true&characterEncoding=utf-8
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    hikari:
-      minimum-idle: 5
-      maximum-pool-size: 10
-      max-lifetime: 1800000
-      idle-timeout: 180000
-      connection-timeout: 30000
+    url: jdbc:postgresql://localhost:5432/postgres?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false&allowMultiQueries=true
+    username: postgres
+    password: qwer@123
+    driver-class-name: org.postgresql.Driver
 
 
 #日志输出
